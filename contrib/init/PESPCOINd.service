@@ -1,0 +1,22 @@
+[Unit]
+Description=PESPCOIN's distributed currency daemon
+After=network.target
+
+[Service]
+User=PESPCOINcore
+Group=PESPCOINcore
+
+Type=forking
+PIDFile=/var/lib/PESPCOINd/PESPCOINd.pid
+ExecStart=/usr/bin/PESPCOINd -daemon -pid=/var/lib/PESPCOINd/PESPCOINd.pid \
+-conf=/etc/PESPCOINcore/PESPCOIN.conf -datadir=/var/lib/PESPCOINd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=PESPCOIN Core
+Comment=PESPCOIN P2P Cryptocurrency
+Comment[de]=Verbinde mit dem PESPCOIN peer-to-peer Netzwerk
+Comment[fr]=PESPCOIN, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=PESPCOIN, eşten eşe kriptografik sanal para birimi
+Exec=PESPCOIN-qt %u
+Terminal=false
+Type=Application
+Icon=PESPCOIN128
+MimeType=x-scheme-handler/PESPCOIN;
+Categories=Office;Finance;

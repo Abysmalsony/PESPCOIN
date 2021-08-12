@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  PESPCOINd The PESPCOIN Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: PESPCOINd
+# processname: PESPCOINd
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/PESPCOINd, see below
+if [ -f /etc/sysconfig/PESPCOINd ]; then
+        . /etc/sysconfig/PESPCOINd
+fi
+
+RETVAL=0
+
+prog=PESPCOINd
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/PESPCOINd
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/PESPCOINd}
+
+# PESPCOINd defaults to /usr/bin/PESPCOINd, override with BITCOIND_BIN
+PESPCOINd=${BITCOIND_BIN-/usr/bin/PESPCOINd}
+
+# PESPCOINd opts default to -disablewallet, override with BITCOIND_OPTS
+PESPCOINd_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $PESPCOINd $PESPCOINd_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

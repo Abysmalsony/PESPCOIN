@@ -1,0 +1,6 @@
+usr/local/bin/PESPCOIN-qt usr/bin
+share/pixmaps/PESPCOIN32.xpm usr/share/pixmaps
+share/pixmaps/PESPCOIN16.xpm usr/share/pixmaps
+share/pixmaps/PESPCOIN128.png usr/share/pixmaps
+debian/PESPCOIN-qt.desktop usr/share/applications
+debian/PESPCOIN-qt.protocol usr/share/kde4/services/
