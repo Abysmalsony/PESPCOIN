@@ -1,0 +1,21 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/PESPCOIN_bg.qm</file>
+        <file alias="de">locale/PESPCOIN_de.qm</file>
+        <file alias="en">locale/PESPCOIN_en.qm</file>
+        <file alias="es">locale/PESPCOIN_es.qm</file>
+        <file alias="fi">locale/PESPCOIN_fi.qm</file>
+        <file alias="fr">locale/PESPCOIN_fr.qm</file>
+        <file alias="it">locale/PESPCOIN_it.qm</file>
+        <file alias="ja">locale/PESPCOIN_ja.qm</file>
+        <file alias="nl">locale/PESPCOIN_nl.qm</file>
+        <file alias="pl">locale/PESPCOIN_pl.qm</file>
+        <file alias="pt">locale/PESPCOIN_pt.qm</file>
+        <file alias="ru">locale/PESPCOIN_ru.qm</file>
+        <file alias="sk">locale/PESPCOIN_sk.qm</file>
+        <file alias="sv">locale/PESPCOIN_sv.qm</file>
+        <file alias="vi">locale/PESPCOIN_vi.qm</file>
+        <file alias="zh_CN">locale/PESPCOIN_zh_CN.qm</file>
+        <file alias="zh_TW">locale/PESPCOIN_zh_TW.qm</file>
+    </qresource>
+</RCC>
